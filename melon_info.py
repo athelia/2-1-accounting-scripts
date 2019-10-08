@@ -1,11 +1,10 @@
 """Print out all the melons in our inventory."""
 
-
+"""
 from melons import melon_names, melon_seedlessness, melon_prices
 
 
 def print_melon(name, seedless, price):
-    """Print each melon with corresponding attribute information."""
 
     have_or_have_not = 'have'
     if seedless:
@@ -16,3 +15,15 @@ def print_melon(name, seedless, price):
 
 for i in melon_names:
     print_melon(melon_names[i], melon_seedlessness[i], melon_prices[i])
+"""
+
+from melons import melons
+
+def print_melon(melons):
+    """Print each melon with corresponding attribute information."""
+    
+    have_or_have_not = 'do not have' if melons['seedless'] else 'have'
+
+    print(f'{melons}s {have_or_have_not} seeds and are ${melons[price]:.2f}')
+
+
